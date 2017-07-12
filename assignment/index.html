@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!--stylesheet imports-->
-    <link rel="stylesheet" href="leaflet.css" />
+    <!-- CSS Imports -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/leaflet.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <!--left panel-->
-    <div style="position: absolute; left: 0px; width: 400px; top: 0; bottom: 0;"></div>
+    <div style="position: absolute; left: 0px; width: 400px; top: 0; bottom:0; ">
+      <div id="heading" style = "position:absolute; left: 10px; top:15px;">WENHAO'S PATH <strong>001</strong> 2015 - 2017 </div>
+      <img id="icon" src='https://image.ibb.co/h1dYFk/city_icons_01.png' border='0' style="position:absolute; width: 200px; height:200px; left:50px; top:90px; z-index:10;"/>
+      <div><p style = "position:absolute; top: 300px; margin: 25px; font-style:oblique;">I live and go to graduate school in Philadelphia, an east coast metropolitan city that has a long and boasted history... let alone the stories about American Revolution and the Independence War... </p></div>
+      <button id="previous" style ="position:absolute; top: 440px; width:100px;  margin: 30px; background-color: #f09085; padding:5px; ">previous</button>
+      <button id="next" style ="position:absolute; top: 440px; width:100px; margin: 30px; left: 150px; background-color: #f09085; padding:5px;">next</button>
+      <canvas id="canvas1" style = "width: 100vw; height: 100vh;"></canvas>
+
+    </div>
     <!--map-->
-    <div id="map" style="position: absolute; right: 0; left: 400px; top: 0; bottom: 0;"></div>
-    
+    <div id="map" style="position: absolute; right: 0; left: 400px; top: 0; bottom:0; ">
+      <!-- position:relative; left:300px; top:300px; -->
+    </div>
     <!--javascript imports-->
     <script src="leaflet.js"></script>
     <!--The code below actually generates the map. Any code you would like to add
     	should be between the "<script></script>" tags.-->
-    <script>
-      var map = L.map('map', {
-        center: [39.9522, -75.1639],
-        zoom: 14
-      });
 
-      var Stamen_TonerLite = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.{ext}', {
-	      attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-      	subdomains: 'abcd',
-      	minZoom: 0,
-      	maxZoom: 20,
-      	ext: 'png'
-      }).addTo(map);
-
-      +      L.marker([39.9563, -75.1572]).addTo(map);
-      +      L.marker([39.9415, -75.1493]).addTo(map);
-      +      L.marker([39.9599, -75.1906]).addTo(map);
 
     </script>
+    <!-- Javascript Imports -->
+    <script src="js/jquery-2.2.0.js"></script>
+    <script src="js/underscore.js"></script>
+    <script src="js/leaflet.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
